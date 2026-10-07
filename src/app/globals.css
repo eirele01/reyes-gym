@@ -1,0 +1,240 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-oswald);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* Reyes Gym brand colors — reference :root variables */
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-navy-dark: var(--navy-dark);
+  --color-red: var(--red);
+  --color-red-dark: var(--red-dark);
+  --color-red-light: var(--red-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-charcoal: var(--charcoal);
+  --color-slate: var(--slate);
+  --color-gray-light: var(--gray-light);
+  --color-soft-border: var(--soft-border);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #FFFFFF;
+  --foreground: #171717;
+  --card: #FFFFFF;
+  --card-foreground: #171717;
+  --popover: #FFFFFF;
+  --popover-foreground: #171717;
+  --primary: #D7262E;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F3F4F6;
+  --secondary-foreground: #171717;
+  --muted: #F3F4F6;
+  --muted-foreground: #5F6673;
+  --accent: #101C35;
+  --accent-foreground: #FFFFFF;
+  --destructive: #D7262E;
+  --border: #D9DDE5;
+  --input: #D9DDE5;
+  --ring: #D7262E;
+  --chart-1: #D7262E;
+  --chart-2: #101C35;
+  --chart-3: #D6A62E;
+  --chart-4: #248A55;
+  --chart-5: #5F6673;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #171717;
+  --sidebar-primary: #D7262E;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F3F4F6;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #D9DDE5;
+  --sidebar-ring: #D7262E;
+
+  /* Reyes Gym brand color literals */
+  --navy: #101C35;
+  --navy-light: #1B2B4D;
+  --navy-dark: #0A1424;
+  --red: #D7262E;
+  --red-dark: #B81F26;
+  --red-light: #E84149;
+  --gold: #D6A62E;
+  --gold-light: #E5BC4F;
+  --charcoal: #171717;
+  --slate: #5F6673;
+  --gray-light: #F3F4F6;
+  --soft-border: #D9DDE5;
+  --success: #248A55;
+  --warning: #D98C16;
+}
+
+.dark {
+  --background: #101C35;
+  --foreground: #FFFFFF;
+  --card: #1B2B4D;
+  --card-foreground: #FFFFFF;
+  --popover: #1B2B4D;
+  --popover-foreground: #FFFFFF;
+  --primary: #D7262E;
+  --primary-foreground: #FFFFFF;
+  --secondary: #1B2B4D;
+  --secondary-foreground: #FFFFFF;
+  --muted: #1B2B4D;
+  --muted-foreground: #A0A8B8;
+  --accent: #D6A62E;
+  --accent-foreground: #101C35;
+  --destructive: #D7262E;
+  --border: rgba(255, 255, 255, 0.12);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #D7262E;
+  --chart-1: #D7262E;
+  --chart-2: #D6A62E;
+  --chart-3: #248A55;
+  --chart-4: #5F6673;
+  --chart-5: #A0A8B8;
+  --sidebar: #0A1424;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #D7262E;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #1B2B4D;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255, 255, 255, 0.12);
+  --sidebar-ring: #D7262E;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-oswald), system-ui, sans-serif;
+  }
+}
+
+/* Offset anchor scrolling for the sticky header so section headings aren't hidden */
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+/* Custom utility classes — plain CSS for maximum reliability in Tailwind v4 */
+.font-heading {
+  font-family: var(--font-oswald), system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.container-gym {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .container-gym {
+    padding-inline: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container-gym {
+    padding-inline: 2rem;
+  }
+}
+
+/* Custom scrollbar for long lists */
+.scrollbar-gym::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scrollbar-gym::-webkit-scrollbar-track {
+  background: #F3F4F6;
+  border-radius: 4px;
+}
+.scrollbar-gym::-webkit-scrollbar-thumb {
+  background: #D9DDE5;
+  border-radius: 4px;
+}
+.scrollbar-gym::-webkit-scrollbar-thumb:hover {
+  background: #5F6673;
+}
+
+.shadow-gym {
+  box-shadow: 0 8px 24px rgba(16, 28, 53, 0.08);
+}
+
+.shadow-gym-lg {
+  box-shadow: 0 16px 48px rgba(16, 28, 53, 0.14);
+}
+
+/* Court line motif */
+.court-lines {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
