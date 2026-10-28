@@ -13,6 +13,7 @@ import { HelpCircle } from "lucide-react";
 export function FaqSection() {
   return (
     <section
+      id="faq"
       className="bg-gray-light py-16 md:py-24 lg:py-28"
       aria-labelledby="faq-heading"
     >

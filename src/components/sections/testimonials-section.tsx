@@ -7,6 +7,7 @@ import { testimonials, testimonialDisclaimer } from "@/data/testimonials";
 export function TestimonialsSection() {
   return (
     <section
+      id="testimonials"
       className="bg-white py-16 md:py-24 lg:py-28"
       aria-labelledby="testimonials-heading"
     >

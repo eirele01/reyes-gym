@@ -16,7 +16,7 @@ const iconMap = {
 
 export function ServicesSection() {
   return (
-    <section className="bg-white py-16 md:py-24 lg:py-28" aria-labelledby="services-heading">
+    <section id="services" className="bg-white py-16 md:py-24 lg:py-28" aria-labelledby="services-heading">
       {/* Section Heading */}
       <div className="container-gym">
         <Reveal className="max-w-2xl mb-12 md:mb-16">

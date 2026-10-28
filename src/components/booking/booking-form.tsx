@@ -92,7 +92,7 @@ export function BookingForm() {
     },
   });
 
-  const serviceValue = watch("service");
+  const serviceValue = watch("service"); // eslint-disable-line react-hooks/incompatible-library
   const timeValue = watch("preferredTime");
 
   const onSubmit = async (data: BookingFormData) => {
